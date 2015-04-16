@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite name="nosetests" tests="9" errors="0" failures="6" skip="0"><testcase classname="unit.operation.TestWithNose.TestNose" name="testcase1_setKAIUP" time="0.081" /><testcase classname="unit.operation.TestWithNose.TestNose" name="testcase2_onlineDeviceLiveview" time="130.347"><failure type="exceptions.AssertionError" message="&#10;-------------------- &gt;&gt; begin captured logging &lt;&lt; --------------------&#10;TestStreamControlServer: DEBUG: test begin liveview&#10;TestStreamControlServer: DEBUG: url list=['rtmp://127.0.0.1:1935/flvplayback/live31-0']&#10;TestStreamControlServer: DEBUG: liveview,deviceId=31, urls=['rtmp://127.0.0.1:1935/flvplayback/live31-0'], url=rtmp://127.0.0.1:1935/flvplayback/live31-0&#10;MysqlConnector: DEBUG: connect to MySQL atlocalhost3306rootAptx4869juzz4v2&#10;TestMysqlDataVerifier: DEBUG: streamSessionInfo=(('e0a7a562-e184-11e4-85fe-d02788e866c4', 'rtmp/h264', 120000L, 31L, 0, 1428892154948L, 0L, 0L),)&#10;TestMysqlDataVerifier: DEBUG: add to stream_session_info success.&#10;TestMysqlDataVerifier: DEBUG: sleep 130 seconds before test delete stream_session_info&#10;MysqlConnector: DEBUG: connect to MySQL atlocalhost3306rootAptx4869juzz4v2&#10;TestMysqlDataVerifier: DEBUG: streamSessionInfo=()&#10;TestMysqlDataVerifier: DEBUG: delete stream_session_info success.&#10;TestDeviceServerService: DEBUG: this test is test frame_rate_in_ds vs rated-frames&#10;TestDeviceServerService: ERROR: testDeviceFrameRate  exception='NoneType' object has no attribute 'getDeviceInfo'&#10;--------------------- &gt;&gt; end captured logging &lt;&lt; ---------------------"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/unittest/case.py", line 327, in run
+    testMethod()
+  File "/usr/lib/python2.7/dist-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/node/importDemo/unit/operation/TestWithNose.py", line 68, in testcase2_onlineDeviceLiveview
+    assert rateResult
+AssertionError: 
+-------------------- >> begin captured logging << --------------------
+TestStreamControlServer: DEBUG: test begin liveview
+TestStreamControlServer: DEBUG: url list=['rtmp://127.0.0.1:1935/flvplayback/live31-0']
+TestStreamControlServer: DEBUG: liveview,deviceId=31, urls=['rtmp://127.0.0.1:1935/flvplayback/live31-0'], url=rtmp://127.0.0.1:1935/flvplayback/live31-0
+MysqlConnector: DEBUG: connect to MySQL atlocalhost3306rootAptx4869juzz4v2
+TestMysqlDataVerifier: DEBUG: streamSessionInfo=(('e0a7a562-e184-11e4-85fe-d02788e866c4', 'rtmp/h264', 120000L, 31L, 0, 1428892154948L, 0L, 0L),)
+TestMysqlDataVerifier: DEBUG: add to stream_session_info success.
+TestMysqlDataVerifier: DEBUG: sleep 130 seconds before test delete stream_session_info
+MysqlConnector: DEBUG: connect to MySQL atlocalhost3306rootAptx4869juzz4v2
+TestMysqlDataVerifier: DEBUG: streamSessionInfo=()
+TestMysqlDataVerifier: DEBUG: delete stream_session_info success.
+TestDeviceServerService: DEBUG: this test is test frame_rate_in_ds vs rated-frames
+TestDeviceServerService: ERROR: testDeviceFrameRate  exception='NoneType' object has no attribute 'getDeviceInfo'
+--------------------- >> end captured logging << ---------------------
+]]></failure></testcase><testcase classname="unit.operation.TestWithNose.TestNose" name="testcase3_keepSession" time="120.640" /><testcase classname="unit.operation.TestWithNose.TestNose" name="testcase4_setChunkSize" time="0.009" /><testcase classname="unit.operation.TestWithNose.TestNose" name="testcase5_streamStorageLimitZero" time="341.257"><failure type="exceptions.AssertionError" message="&#10;-------------------- &gt;&gt; begin captured logging &lt;&lt; --------------------&#10;MysqlConnector: DEBUG: connect to MySQL atlocalhost3306rootAptx4869juzz4v2&#10;TestDeviceManagementServer: DEBUG: begin video recording, result : True&#10;TestNose: DEBUG: begin_local_time : 13042015103326&#10;testConfigControlService: DEBUG: testSetStreamLimit result : True&#10;TestNose: DEBUG: set stream list size, result=True&#10;TestNose: INFO: set storage space is 0M                OK&#10;TestNose: DEBUG: end_local_time : 13042015103606&#10;TestDeviceManagementServer: DEBUG: stop video recording, result : True&#10;TestNose: DEBUG: close video time :&#10;TestNose: DEBUG: RecordingServerService : &lt;arbiter.TestRecordingServerService.RecordingServerServiceClient instance at 0x1d6fdd0&gt;&#10;MysqlConnector: DEBUG: connect to MySQL atlocalhost3306rootAptx4869juzz4v2&#10;TestRecordingServerService: DEBUG: RS client=&lt;RecordingCommsAPI.RecordingServerService.Client instance at 0x17c48c0&gt;&#10;TestRecordingServerService: DEBUG: streamlist is=['{&quot;from&quot;:&quot;20150413103400&quot;,&quot;to&quot;:&quot;20150413103600&quot;,&quot;dur&quot;:&quot;120.68&quot;,&quot;fn&quot;:&quot;3300&quot;,&quot;fps&quot;:&quot;27.35&quot;,&quot;size&quot;:&quot;8208384&quot;}', '{&quot;from&quot;:&quot;20150413103600&quot;,&quot;to&quot;:&quot;20150413103605&quot;,&quot;dur&quot;:&quot;5.86&quot;,&quot;fn&quot;:&quot;168&quot;,&quot;fps&quot;:&quot;28.65&quot;,&quot;size&quot;:&quot;428032&quot;}']&#10;TestRecordingServerService: DEBUG: The first value : {&quot;from&quot;:&quot;20150413103400&quot;,&quot;to&quot;:&quot;20150413103600&quot;,&quot;dur&quot;:&quot;120.68&quot;,&quot;fn&quot;:&quot;3300&quot;,&quot;fps&quot;:&quot;27.35&quot;,&quot;size&quot;:&quot;8208384&quot;}&#10;TestNose: INFO: test storage space is 0M                False&#10;--------------------- &gt;&gt; end captured logging &lt;&lt; ---------------------"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/unittest/case.py", line 327, in run
+    testMethod()
+  File "/usr/lib/python2.7/dist-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/node/importDemo/unit/operation/TestWithNose.py", line 100, in testcase5_streamStorageLimitZero
+    assert result
+AssertionError: 
+-------------------- >> begin captured logging << --------------------
+MysqlConnector: DEBUG: connect to MySQL atlocalhost3306rootAptx4869juzz4v2
+TestDeviceManagementServer: DEBUG: begin video recording, result : True
+TestNose: DEBUG: begin_local_time : 13042015103326
+testConfigControlService: DEBUG: testSetStreamLimit result : True
+TestNose: DEBUG: set stream list size, result=True
+TestNose: INFO: set storage space is 0M                OK
+TestNose: DEBUG: end_local_time : 13042015103606
+TestDeviceManagementServer: DEBUG: stop video recording, result : True
+TestNose: DEBUG: close video time :
+TestNose: DEBUG: RecordingServerService : <arbiter.TestRecordingServerService.RecordingServerServiceClient instance at 0x1d6fdd0>
+MysqlConnector: DEBUG: connect to MySQL atlocalhost3306rootAptx4869juzz4v2
+TestRecordingServerService: DEBUG: RS client=<RecordingCommsAPI.RecordingServerService.Client instance at 0x17c48c0>
+TestRecordingServerService: DEBUG: streamlist is=['{"from":"20150413103400","to":"20150413103600","dur":"120.68","fn":"3300","fps":"27.35","size":"8208384"}', '{"from":"20150413103600","to":"20150413103605","dur":"5.86","fn":"168","fps":"28.65","size":"428032"}']
+TestRecordingServerService: DEBUG: The first value : {"from":"20150413103400","to":"20150413103600","dur":"120.68","fn":"3300","fps":"27.35","size":"8208384"}
+TestNose: INFO: test storage space is 0M                False
+--------------------- >> end captured logging << ---------------------
+]]></failure></testcase><testcase classname="unit.operation.TestWithNose.TestNose" name="testcase6_streamStorageLimitOther" time="380.500"><failure type="exceptions.AssertionError" message="&#10;-------------------- &gt;&gt; begin captured logging &lt;&lt; --------------------&#10;TestDeviceManagementServer: DEBUG: begin video recording, result : True&#10;TestNose: DEBUG: begin_local_time : 13042015103907&#10;TestNose: DEBUG: message: next will wait time 130s for test 10M&#10;testConfigControlService: DEBUG: testSetStreamLimit result : True&#10;TestNose: DEBUG: set stream list size, result=True&#10;TestNose: INFO: set storage space is 10M                OK&#10;TestNose: DEBUG: end_local_time : 13042015104157&#10;TestRecordingServerService: DEBUG: RS client=&lt;RecordingCommsAPI.RecordingServerService.Client instance at 0x17c48c0&gt;&#10;TestRecordingServerService: DEBUG: streamlist is=['{&quot;from&quot;:&quot;20150413103908&quot;,&quot;to&quot;:&quot;20150413104000&quot;,&quot;dur&quot;:&quot;52.39&quot;,&quot;fn&quot;:&quot;1470&quot;,&quot;fps&quot;:&quot;28.06&quot;,&quot;size&quot;:&quot;3710976&quot;}']&#10;TestRecordingServerService: DEBUG: The first value : {&quot;from&quot;:&quot;20150413103908&quot;,&quot;to&quot;:&quot;20150413104000&quot;,&quot;dur&quot;:&quot;52.39&quot;,&quot;fn&quot;:&quot;1470&quot;,&quot;fps&quot;:&quot;28.06&quot;,&quot;size&quot;:&quot;3710976&quot;}&#10;TestNose: DEBUG: first_video_begin :20150413103908&#10;TestRecordingServerService: DEBUG: RS client=&lt;RecordingCommsAPI.RecordingServerService.Client instance at 0x17c48c0&gt;&#10;TestRecordingServerService: DEBUG: streamlist is=['{&quot;from&quot;:&quot;20150413103908&quot;,&quot;to&quot;:&quot;20150413104000&quot;,&quot;dur&quot;:&quot;52.39&quot;,&quot;fn&quot;:&quot;1470&quot;,&quot;fps&quot;:&quot;28.06&quot;,&quot;size&quot;:&quot;3710976&quot;}', '{&quot;from&quot;:&quot;20150413104000&quot;,&quot;to&quot;:&quot;20150413104159&quot;,&quot;dur&quot;:&quot;119.95&quot;,&quot;fn&quot;:&quot;3330&quot;,&quot;fps&quot;:&quot;27.76&quot;,&quot;size&quot;:&quot;8521728&quot;}', '{&quot;from&quot;:&quot;20150413104200&quot;,&quot;to&quot;:&quot;20150413104359&quot;,&quot;dur&quot;:&quot;119.38&quot;,&quot;fn&quot;:&quot;3300&quot;,&quot;fps&quot;:&quot;27.64&quot;,&quot;size&quot;:&quot;8434688&quot;}']&#10;TestRecordingServerService: DEBUG: The first value : {&quot;from&quot;:&quot;20150413103908&quot;,&quot;to&quot;:&quot;20150413104000&quot;,&quot;dur&quot;:&quot;52.39&quot;,&quot;fn&quot;:&quot;1470&quot;,&quot;fps&quot;:&quot;28.06&quot;,&quot;size&quot;:&quot;3710976&quot;}&#10;TestNose: DEBUG: second_video_begin : 20150413103908&#10;TestNose: INFO: test storage space is 10M                False&#10;--------------------- &gt;&gt; end captured logging &lt;&lt; ---------------------"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/unittest/case.py", line 327, in run
+    testMethod()
+  File "/usr/lib/python2.7/dist-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/node/importDemo/unit/operation/TestWithNose.py", line 113, in testcase6_streamStorageLimitOther
+    assert one_result
+AssertionError: 
+-------------------- >> begin captured logging << --------------------
+TestDeviceManagementServer: DEBUG: begin video recording, result : True
+TestNose: DEBUG: begin_local_time : 13042015103907
+TestNose: DEBUG: message: next will wait time 130s for test 10M
+testConfigControlService: DEBUG: testSetStreamLimit result : True
+TestNose: DEBUG: set stream list size, result=True
+TestNose: INFO: set storage space is 10M                OK
+TestNose: DEBUG: end_local_time : 13042015104157
+TestRecordingServerService: DEBUG: RS client=<RecordingCommsAPI.RecordingServerService.Client instance at 0x17c48c0>
+TestRecordingServerService: DEBUG: streamlist is=['{"from":"20150413103908","to":"20150413104000","dur":"52.39","fn":"1470","fps":"28.06","size":"3710976"}']
+TestRecordingServerService: DEBUG: The first value : {"from":"20150413103908","to":"20150413104000","dur":"52.39","fn":"1470","fps":"28.06","size":"3710976"}
+TestNose: DEBUG: first_video_begin :20150413103908
+TestRecordingServerService: DEBUG: RS client=<RecordingCommsAPI.RecordingServerService.Client instance at 0x17c48c0>
+TestRecordingServerService: DEBUG: streamlist is=['{"from":"20150413103908","to":"20150413104000","dur":"52.39","fn":"1470","fps":"28.06","size":"3710976"}', '{"from":"20150413104000","to":"20150413104159","dur":"119.95","fn":"3330","fps":"27.76","size":"8521728"}', '{"from":"20150413104200","to":"20150413104359","dur":"119.38","fn":"3300","fps":"27.64","size":"8434688"}']
+TestRecordingServerService: DEBUG: The first value : {"from":"20150413103908","to":"20150413104000","dur":"52.39","fn":"1470","fps":"28.06","size":"3710976"}
+TestNose: DEBUG: second_video_begin : 20150413103908
+TestNose: INFO: test storage space is 10M                False
+--------------------- >> end captured logging << ---------------------
+]]></failure></testcase><testcase classname="unit.operation.TestWithNose.TestNose" name="testcase7_videoStore" time="768.207"><failure type="exceptions.AssertionError" message="&#10;-------------------- &gt;&gt; begin captured logging &lt;&lt; --------------------&#10;TestDeviceManagementServer: DEBUG: Test Video Strategy&#10;TestDeviceManagementServer: DEBUG: begin video recording, result : True&#10;TestDeviceManagementServer: DEBUG: msg:the next will sleep 2*60*3s~&#10;TestDeviceManagementServer: DEBUG: the 1 cycle end&#10;TestDeviceManagementServer: DEBUG: msg:the next will sleep 2*60*3s~&#10;TestDeviceManagementServer: DEBUG: the 2 cycle end&#10;TestDeviceManagementServer: DEBUG: TestVideoStrategy success!&#10;TestStreamControlServer: DEBUG: url list=['rtmp://127.0.0.1/flvplayback/ee28fa5c-e188-11e4-85fe-d02788e866c4.playlist']&#10;TestStreamControlServer: DEBUG: urls:['rtmp://127.0.0.1/flvplayback/ee28fa5c-e188-11e4-85fe-d02788e866c4.playlist']&#10;TestStreamControlServer: DEBUG: the result is success&#10;TestRecordingServerService: DEBUG: {&quot;storage-type&quot;: &quot;video-recording&quot;, &quot;begin&quot;: &quot;13042015104800&quot;, &quot;end&quot;: &quot;13042015105800&quot;, &quot;stream-type&quot;: &quot;http/h264&quot;}&#10;TestRecordingServerService: DEBUG: ['{&quot;from&quot;:&quot;20150413104800&quot;,&quot;to&quot;:&quot;20150413105000&quot;,&quot;dur&quot;:&quot;120.22&quot;,&quot;fn&quot;:&quot;3360&quot;,&quot;fps&quot;:&quot;27.95&quot;,&quot;size&quot;:&quot;8316928&quot;}', '{&quot;from&quot;:&quot;20150413105000&quot;,&quot;to&quot;:&quot;20150413105159&quot;,&quot;dur&quot;:&quot;119.40&quot;,&quot;fn&quot;:&quot;3322&quot;,&quot;fps&quot;:&quot;27.82&quot;,&quot;size&quot;:&quot;8198144&quot;}', '{&quot;from&quot;:&quot;20150413105400&quot;,&quot;to&quot;:&quot;20150413105559&quot;,&quot;dur&quot;:&quot;119.81&quot;,&quot;fn&quot;:&quot;3270&quot;,&quot;fps&quot;:&quot;27.29&quot;,&quot;size&quot;:&quot;8142848&quot;}', '{&quot;from&quot;:&quot;20150413105600&quot;,&quot;to&quot;:&quot;20150413105759&quot;,&quot;dur&quot;:&quot;119.93&quot;,&quot;fn&quot;:&quot;3327&quot;,&quot;fps&quot;:&quot;27.74&quot;,&quot;size&quot;:&quot;8379392&quot;}']&#10;TestRecordingServerService: DEBUG: *********************&#10;TestRecordingServerService: DEBUG: fps:27.95&#10;TestRecordingServerService: DEBUG: this video from 20150413104800 to 20150413105000 is fail&#10;TestRecordingServerService: INFO: from 20150413104800 to 20150413105000, the video's frame rate is 27.95, the rate from DS is 14.7586206897, differ big. False&#10;TestRecordingServerService: DEBUG: *********************&#10;TestRecordingServerService: DEBUG: fps:27.82&#10;TestRecordingServerService: DEBUG: this video from 20150413105000 to 20150413105159 is fail&#10;TestRecordingServerService: INFO: from 20150413105000 to 20150413105159, the video's frame rate is 27.82, the rate from DS is 14.7586206897, differ big. False&#10;TestRecordingServerService: DEBUG: *********************&#10;TestRecordingServerService: DEBUG: fps:27.29&#10;TestRecordingServerService: DEBUG: this video from 20150413105400 to 20150413105559 is fail&#10;TestRecordingServerService: INFO: from 20150413105400 to 20150413105559, the video's frame rate is 27.29, the rate from DS is 14.7586206897, differ big. False&#10;TestRecordingServerService: DEBUG: *********************&#10;TestRecordingServerService: DEBUG: fps:27.74&#10;TestRecordingServerService: DEBUG: this video from 20150413105600 to 20150413105759 is fail&#10;TestRecordingServerService: INFO: from 20150413105600 to 20150413105759, the video's frame rate is 27.74, the rate from DS is 14.7586206897, differ big. False&#10;TestRecordingServerService: INFO: we recorded four video clips, but only 0 are correct, not as expected. False&#10;--------------------- &gt;&gt; end captured logging &lt;&lt; ---------------------"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/unittest/case.py", line 327, in run
+    testMethod()
+  File "/usr/lib/python2.7/dist-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/node/importDemo/unit/operation/TestWithNose.py", line 131, in testcase7_videoStore
+    assert videoContentOK
+AssertionError: 
+-------------------- >> begin captured logging << --------------------
+TestDeviceManagementServer: DEBUG: Test Video Strategy
+TestDeviceManagementServer: DEBUG: begin video recording, result : True
+TestDeviceManagementServer: DEBUG: msg:the next will sleep 2*60*3s~
+TestDeviceManagementServer: DEBUG: the 1 cycle end
+TestDeviceManagementServer: DEBUG: msg:the next will sleep 2*60*3s~
+TestDeviceManagementServer: DEBUG: the 2 cycle end
+TestDeviceManagementServer: DEBUG: TestVideoStrategy success!
+TestStreamControlServer: DEBUG: url list=['rtmp://127.0.0.1/flvplayback/ee28fa5c-e188-11e4-85fe-d02788e866c4.playlist']
+TestStreamControlServer: DEBUG: urls:['rtmp://127.0.0.1/flvplayback/ee28fa5c-e188-11e4-85fe-d02788e866c4.playlist']
+TestStreamControlServer: DEBUG: the result is success
+TestRecordingServerService: DEBUG: {"storage-type": "video-recording", "begin": "13042015104800", "end": "13042015105800", "stream-type": "http/h264"}
+TestRecordingServerService: DEBUG: ['{"from":"20150413104800","to":"20150413105000","dur":"120.22","fn":"3360","fps":"27.95","size":"8316928"}', '{"from":"20150413105000","to":"20150413105159","dur":"119.40","fn":"3322","fps":"27.82","size":"8198144"}', '{"from":"20150413105400","to":"20150413105559","dur":"119.81","fn":"3270","fps":"27.29","size":"8142848"}', '{"from":"20150413105600","to":"20150413105759","dur":"119.93","fn":"3327","fps":"27.74","size":"8379392"}']
+TestRecordingServerService: DEBUG: *********************
+TestRecordingServerService: DEBUG: fps:27.95
+TestRecordingServerService: DEBUG: this video from 20150413104800 to 20150413105000 is fail
+TestRecordingServerService: INFO: from 20150413104800 to 20150413105000, the video's frame rate is 27.95, the rate from DS is 14.7586206897, differ big. False
+TestRecordingServerService: DEBUG: *********************
+TestRecordingServerService: DEBUG: fps:27.82
+TestRecordingServerService: DEBUG: this video from 20150413105000 to 20150413105159 is fail
+TestRecordingServerService: INFO: from 20150413105000 to 20150413105159, the video's frame rate is 27.82, the rate from DS is 14.7586206897, differ big. False
+TestRecordingServerService: DEBUG: *********************
+TestRecordingServerService: DEBUG: fps:27.29
+TestRecordingServerService: DEBUG: this video from 20150413105400 to 20150413105559 is fail
+TestRecordingServerService: INFO: from 20150413105400 to 20150413105559, the video's frame rate is 27.29, the rate from DS is 14.7586206897, differ big. False
+TestRecordingServerService: DEBUG: *********************
+TestRecordingServerService: DEBUG: fps:27.74
+TestRecordingServerService: DEBUG: this video from 20150413105600 to 20150413105759 is fail
+TestRecordingServerService: INFO: from 20150413105600 to 20150413105759, the video's frame rate is 27.74, the rate from DS is 14.7586206897, differ big. False
+TestRecordingServerService: INFO: we recorded four video clips, but only 0 are correct, not as expected. False
+--------------------- >> end captured logging << ---------------------
+]]></failure></testcase><testcase classname="unit.operation.TestWithNose.TestNose" name="testcase8_imageStore" time="229.684"><failure type="exceptions.AssertionError" message="&#10;-------------------- &gt;&gt; begin captured logging &lt;&lt; --------------------&#10;TestDeviceManagementServer: DEBUG: Test Image Strategy&#10;TestDeviceManagementServer: DEBUG: result:True&#10;TestDeviceManagementServer: DEBUG: msg:sleep 60s&#10;TestDeviceManagementServer: DEBUG: msg:sleep 60s&#10;TestDeviceManagementServer: DEBUG: waiting  next~&#10;TestDeviceManagementServer: DEBUG: msg:sleep 60s&#10;TestDeviceManagementServer: DEBUG: testPhotoStrategy success!&#10;TestStreamControlServer: DEBUG: url list=['http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413105902.jpg', 'http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413105908.jpg', 'http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413105915.jpg', 'http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413105921.jpg', 'http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413105927.jpg', 'http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413105933.jpg', 'http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413105939.jpg', 'http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413105945.jpg', 'http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413105951.jpg', 'http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413105957.jpg', 'http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413110112.jpg', 'http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413110122.jpg', 'http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413110132.jpg']&#10;TestStreamControlServer: DEBUG: urls size:13&#10;TestStreamControlServer: DEBUG: the result is false&#10;TestStreamControlServer: INFO: image recording URL size is 13, not as expected. False&#10;--------------------- &gt;&gt; end captured logging &lt;&lt; ---------------------"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/unittest/case.py", line 327, in run
+    testMethod()
+  File "/usr/lib/python2.7/dist-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/node/importDemo/unit/operation/TestWithNose.py", line 142, in testcase8_imageStore
+    assert imageUrlOK
+AssertionError: 
+-------------------- >> begin captured logging << --------------------
+TestDeviceManagementServer: DEBUG: Test Image Strategy
+TestDeviceManagementServer: DEBUG: result:True
+TestDeviceManagementServer: DEBUG: msg:sleep 60s
+TestDeviceManagementServer: DEBUG: msg:sleep 60s
+TestDeviceManagementServer: DEBUG: waiting  next~
+TestDeviceManagementServer: DEBUG: msg:sleep 60s
+TestDeviceManagementServer: DEBUG: testPhotoStrategy success!
+TestStreamControlServer: DEBUG: url list=['http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413105902.jpg', 'http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413105908.jpg', 'http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413105915.jpg', 'http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413105921.jpg', 'http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413105927.jpg', 'http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413105933.jpg', 'http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413105939.jpg', 'http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413105945.jpg', 'http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413105951.jpg', 'http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413105957.jpg', 'http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413110112.jpg', 'http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413110122.jpg', 'http://127.0.0.1:18080/storage-image/31/0/2015-04-13/20150413110132.jpg']
+TestStreamControlServer: DEBUG: urls size:13
+TestStreamControlServer: DEBUG: the result is false
+TestStreamControlServer: INFO: image recording URL size is 13, not as expected. False
+--------------------- >> end captured logging << ---------------------
+]]></failure></testcase><testcase classname="unit.operation.TestWithNose.TestNose" name="testcase9_VideoEvent" time="100.394"><failure type="exceptions.AssertionError" message="&#10;-------------------- &gt;&gt; begin captured logging &lt;&lt; --------------------&#10;TestDeviceManagementServer: DEBUG: begin video recording, result : True&#10;TestNose: INFO: [1] the 1 round event video recording...&#10;TestDeviceDataReceiverService: DEBUG: the test sendEventToArbiter start!&#10;TestDeviceDataReceiverService: DEBUG: isTrue:True&#10;TestNose: INFO: send event video to Arbiter             OK&#10;TestRecordingServerService: DEBUG: *******testGetEventStreamList begin******&#10;TestRecordingServerService: DEBUG: &lt;RecordingCommsAPI.RecordingServerService.Client instance at 0x17c48c0&gt;&#10;TestRecordingServerService: DEBUG: streamList:[]&#10;TestRecordingServerService: DEBUG: *******testGetEventStreamList end******&#10;TestNose: INFO: event video content check               False&#10;TestNose: INFO: [2] the 2 round event video recording...&#10;TestDeviceDataReceiverService: DEBUG: the test sendEventToArbiter start!&#10;TestDeviceDataReceiverService: DEBUG: isTrue:True&#10;TestNose: INFO: send event video to Arbiter             OK&#10;TestRecordingServerService: DEBUG: *******testGetEventStreamList begin******&#10;TestRecordingServerService: DEBUG: &lt;RecordingCommsAPI.RecordingServerService.Client instance at 0x17c48c0&gt;&#10;TestRecordingServerService: DEBUG: streamList:[]&#10;TestRecordingServerService: DEBUG: *******testGetEventStreamList end******&#10;TestNose: INFO: event video content check               False&#10;TestNose: INFO: [3] the 3 round event video recording...&#10;TestDeviceDataReceiverService: DEBUG: the test sendEventToArbiter start!&#10;TestDeviceDataReceiverService: DEBUG: isTrue:True&#10;TestNose: INFO: send event video to Arbiter             OK&#10;TestRecordingServerService: DEBUG: *******testGetEventStreamList begin******&#10;TestRecordingServerService: DEBUG: &lt;RecordingCommsAPI.RecordingServerService.Client instance at 0x17c48c0&gt;&#10;TestRecordingServerService: DEBUG: streamList:[]&#10;TestRecordingServerService: DEBUG: *******testGetEventStreamList end******&#10;TestNose: INFO: event video content check               False&#10;TestNose: INFO: [4] the 4 round event video recording...&#10;TestDeviceDataReceiverService: DEBUG: the test sendEventToArbiter start!&#10;TestDeviceDataReceiverService: DEBUG: isTrue:True&#10;TestNose: INFO: send event video to Arbiter             OK&#10;TestRecordingServerService: DEBUG: *******testGetEventStreamList begin******&#10;TestRecordingServerService: DEBUG: &lt;RecordingCommsAPI.RecordingServerService.Client instance at 0x17c48c0&gt;&#10;TestRecordingServerService: DEBUG: streamList:[]&#10;TestRecordingServerService: DEBUG: *******testGetEventStreamList end******&#10;TestNose: INFO: event video content check               False&#10;TestNose: INFO: [5] the 5 round event video recording...&#10;TestDeviceDataReceiverService: DEBUG: the test sendEventToArbiter start!&#10;TestDeviceDataReceiverService: DEBUG: isTrue:True&#10;TestNose: INFO: send event video to Arbiter             OK&#10;TestRecordingServerService: DEBUG: *******testGetEventStreamList begin******&#10;TestRecordingServerService: DEBUG: &lt;RecordingCommsAPI.RecordingServerService.Client instance at 0x17c48c0&gt;&#10;TestRecordingServerService: DEBUG: streamList:[]&#10;TestRecordingServerService: DEBUG: *******testGetEventStreamList end******&#10;TestNose: INFO: event video content check               False&#10;TestNose: INFO: [6] the 6 round event video recording...&#10;TestDeviceDataReceiverService: DEBUG: the test sendEventToArbiter start!&#10;TestDeviceDataReceiverService: DEBUG: isTrue:True&#10;TestNose: INFO: send event video to Arbiter             OK&#10;TestRecordingServerService: DEBUG: *******testGetEventStreamList begin******&#10;TestRecordingServerService: DEBUG: &lt;RecordingCommsAPI.RecordingServerService.Client instance at 0x17c48c0&gt;&#10;TestRecordingServerService: DEBUG: streamList:[]&#10;TestRecordingServerService: DEBUG: *******testGetEventStreamList end******&#10;TestNose: INFO: event video content check               False&#10;--------------------- &gt;&gt; end captured logging &lt;&lt; ---------------------"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python2.7/unittest/case.py", line 327, in run
+    testMethod()
+  File "/usr/lib/python2.7/dist-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/node/importDemo/unit/operation/TestWithNose.py", line 178, in testcase9_VideoEvent
+    assert succ_time >= 5
+AssertionError: 
+-------------------- >> begin captured logging << --------------------
+TestDeviceManagementServer: DEBUG: begin video recording, result : True
+TestNose: INFO: [1] the 1 round event video recording...
+TestDeviceDataReceiverService: DEBUG: the test sendEventToArbiter start!
+TestDeviceDataReceiverService: DEBUG: isTrue:True
+TestNose: INFO: send event video to Arbiter             OK
+TestRecordingServerService: DEBUG: *******testGetEventStreamList begin******
+TestRecordingServerService: DEBUG: <RecordingCommsAPI.RecordingServerService.Client instance at 0x17c48c0>
+TestRecordingServerService: DEBUG: streamList:[]
+TestRecordingServerService: DEBUG: *******testGetEventStreamList end******
+TestNose: INFO: event video content check               False
+TestNose: INFO: [2] the 2 round event video recording...
+TestDeviceDataReceiverService: DEBUG: the test sendEventToArbiter start!
+TestDeviceDataReceiverService: DEBUG: isTrue:True
+TestNose: INFO: send event video to Arbiter             OK
+TestRecordingServerService: DEBUG: *******testGetEventStreamList begin******
+TestRecordingServerService: DEBUG: <RecordingCommsAPI.RecordingServerService.Client instance at 0x17c48c0>
+TestRecordingServerService: DEBUG: streamList:[]
+TestRecordingServerService: DEBUG: *******testGetEventStreamList end******
+TestNose: INFO: event video content check               False
+TestNose: INFO: [3] the 3 round event video recording...
+TestDeviceDataReceiverService: DEBUG: the test sendEventToArbiter start!
+TestDeviceDataReceiverService: DEBUG: isTrue:True
+TestNose: INFO: send event video to Arbiter             OK
+TestRecordingServerService: DEBUG: *******testGetEventStreamList begin******
+TestRecordingServerService: DEBUG: <RecordingCommsAPI.RecordingServerService.Client instance at 0x17c48c0>
+TestRecordingServerService: DEBUG: streamList:[]
+TestRecordingServerService: DEBUG: *******testGetEventStreamList end******
+TestNose: INFO: event video content check               False
+TestNose: INFO: [4] the 4 round event video recording...
+TestDeviceDataReceiverService: DEBUG: the test sendEventToArbiter start!
+TestDeviceDataReceiverService: DEBUG: isTrue:True
+TestNose: INFO: send event video to Arbiter             OK
+TestRecordingServerService: DEBUG: *******testGetEventStreamList begin******
+TestRecordingServerService: DEBUG: <RecordingCommsAPI.RecordingServerService.Client instance at 0x17c48c0>
+TestRecordingServerService: DEBUG: streamList:[]
+TestRecordingServerService: DEBUG: *******testGetEventStreamList end******
+TestNose: INFO: event video content check               False
+TestNose: INFO: [5] the 5 round event video recording...
+TestDeviceDataReceiverService: DEBUG: the test sendEventToArbiter start!
+TestDeviceDataReceiverService: DEBUG: isTrue:True
+TestNose: INFO: send event video to Arbiter             OK
+TestRecordingServerService: DEBUG: *******testGetEventStreamList begin******
+TestRecordingServerService: DEBUG: <RecordingCommsAPI.RecordingServerService.Client instance at 0x17c48c0>
+TestRecordingServerService: DEBUG: streamList:[]
+TestRecordingServerService: DEBUG: *******testGetEventStreamList end******
+TestNose: INFO: event video content check               False
+TestNose: INFO: [6] the 6 round event video recording...
+TestDeviceDataReceiverService: DEBUG: the test sendEventToArbiter start!
+TestDeviceDataReceiverService: DEBUG: isTrue:True
+TestNose: INFO: send event video to Arbiter             OK
+TestRecordingServerService: DEBUG: *******testGetEventStreamList begin******
+TestRecordingServerService: DEBUG: <RecordingCommsAPI.RecordingServerService.Client instance at 0x17c48c0>
+TestRecordingServerService: DEBUG: streamList:[]
+TestRecordingServerService: DEBUG: *******testGetEventStreamList end******
+TestNose: INFO: event video content check               False
+--------------------- >> end captured logging << ---------------------
+]]></failure></testcase></testsuite>
